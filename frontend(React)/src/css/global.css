@@ -1,0 +1,29 @@
+.text-center
+{
+    text-align: center;
+}
+
+.heading-small
+{
+    font-size: 1.25rem;
+}
+
+.heading-medium
+{
+    font-size: 1.50rem;
+}
+
+.heading-bing
+{
+    font-size: 1.75rem;
+}
+
+.bg-light-grey-green
+{
+    background-color: #F1EEE9;
+}
+
+.bg-dark-black
+{
+    background-color: #000000;
+}

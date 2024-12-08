@@ -1,0 +1,623 @@
+.analysis-containers{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px ;
+  margin-right: 45px;
+  gap: 100px;
+}
+
+.analysis-containers-time{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px ;
+  margin-right: 45px;
+  gap: 40px;
+}
+.first-part {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 20px 20px;
+}
+
+.header-image {
+  width: 356px;
+  height: 356px;
+}
+
+.maintenance-events {
+  margin-left: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maintenance-events h1 {
+  font-size: 54px;
+}
+.maintenance-log {
+  height: 500px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-right: 100px;
+  gap: 50px;
+}
+
+.maintenance-log-button, .bill-list-button, .record-form-button {
+  padding: 0 1 rem;
+  line-height: 2.5rem;
+  min-width: 3rem;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(to bottom, #181409, #d7d1bc),
+    linear-gradient(to right, #181409, #d7d1bc),
+    linear-gradient(to bottom, #181409, #f8e7aa),
+    linear-gradient(to right, #181409, #f8e7aa);
+  background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+  background-position: 0 0, 0 0, 100% 0, 100% 100%;
+  background-repeat: no-repeat;
+  color: white;
+  width: 200px;
+  /* margin: auto; */
+}
+
+.buttonAnimate {
+  animation: relocation 1s linear forwards;
+}
+
+.maintenance-log-button:hover, .bill-list-button:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s linear;
+}
+
+@keyframes relocation {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(100px);
+  }
+}
+
+
+/*         Record.js            */
+
+.new-record-form-container, .update-record-container, .planning-record-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.forms-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: -90px;
+  
+}
+
+.record-form-button{
+  width: 200px;
+}
+
+.record-form-select-item, .record-form-input{
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(to bottom, #181409, #d7d1bc),
+    linear-gradient(to right, #181409, #d7d1bc),
+    linear-gradient(to bottom, #181409, #f8e7aa),
+    linear-gradient(to right, #181409, #f8e7aa);
+  background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+  background-position: 0 0, 0 0, 100% 0, 100% 100%;
+  background-repeat: no-repeat;
+  color: white;
+  width: 200px;
+  height: 35px;
+}
+
+
+
+/*         RecordList.js        */
+
+.maintenance-filter-item{
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+}
+
+/* Maliyet filtresi için ayrı tasarım*/
+.maintenance-filter-item-price{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+}
+
+/* İkonların rengi ve büyüklüğü*/
+.maintenance-icons{
+  width: 32px;
+  height: 32px;
+  color: #0a0e19;
+}
+
+/* Maliyet ikonu */
+.maintenance-icons-price{
+  width: 32px;
+  height: 32px;
+  color: #0a0e19;
+  margin-top: 15px;
+}
+
+
+.maintenance-filters-area {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -175px;
+  /* background: linear-gradient(180deg, #9ea393, #a49583) ; */
+}
+
+.maintenance-filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  padding: 35px;
+  margin-top: -3px;
+  margin-right: 40px;
+  margin-left: 30px;
+  gap: 12.5px;
+  border-radius: 10px;
+  background-color: rgb(231, 230, 230);
+  z-index: 10; /* z-index değerini sayı olarak belirtin */
+  box-shadow: 5px 5px 10px black,
+  7px 7px 10px white;
+}
+
+
+
+.maintenance-filter-item select, 
+.maintenance-filter-item input{
+  width: 200px;
+    border-radius: 5px;
+    background: linear-gradient(90deg,#0a0e19, #18213a);
+    color: white;
+}
+
+.maintenance-filter-item option {
+  background-color: #18213a; /* Dropdown menüsündeki seçeneklerin arka plan rengi */
+  color: white; /* Seçeneklerin yazı rengi */
+}
+
+/* Genel Stil Ayarları */
+.maintenance-filters-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    padding-top: 55px;
+    background-color: rgb(231, 230, 230);
+    z-index: 10; /* z-index değerini sayı olarak belirtin */
+    box-shadow: -5px -5px 10px black,
+    -7px -7px 10px white;
+    /* max-width: 1300px; */
+}
+
+.maintenance-history , .active-maintenance, .pending-maintenance, .bill-list {
+  margin-top: -50px;
+}
+
+/* Başlık Stili */
+.maintenance-filters-list h2 {  
+    font-size: 1.8em;
+    color: #0a0e19;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0a0e19;
+    padding-bottom: 5px;
+}
+
+/* Tablolar için Genel Stil */
+.maintenance-filters-list table {
+    width: 1450px;
+    height: 300px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+/* Başlık Satırları */
+.maintenance-filters-list th {
+    background-color: #0a0e19;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Satır Stilleri */
+.maintenance-filters-list tbody tr {
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.maintenance-filters-list tbody tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+}
+
+.maintenance-filters-list tbody td {
+    padding: 12px;
+    font-size: 15px;
+    color: #333;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+/* Hover Efekti */
+.maintenance-filters-list tbody tr:hover {
+    background-color: #e9f4ff;
+}
+
+/* Sütun Ayarları */
+.maintenance-history-table td:last-child,
+.active-maintenance td:last-child,
+.pending-maintenance td:last-child {
+    text-align: left;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+
+/* Kenarlıklar ve Gölge Efekti */
+.maintenance-filters-list th:first-child {
+    border-left: 3px solid #007BFF;
+}
+
+.maintenance-filters-list td:last-child {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.bill-list-button{
+  width: 10rem;
+  height: 2.5rem;
+}
+
+.bill-list-button:hover{
+  scale:1.1;
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 600px) {
+    .maintenance-filters-list table,
+    .maintenance-filters-list tbody,
+    .maintenance-filters-list tr,
+    .maintenance-filters-list th,
+    .maintenance-filters-list td {
+        display: block;
+        width: 100%;
+    }
+    
+    .maintenance-filters-list th {
+        display: none;
+    }
+
+    .maintenance-filters-list td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
+
+    .maintenance-filters-list td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #007BFF;
+    }
+}
+
+.filters-button{
+  width: 130px;
+  height: 40px;
+  background: linear-gradient(45deg, #0a0e19, #3a537d);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.filters-button:hover{
+  background: linear-gradient(45deg, #3a537d, #0a0e19);
+  transform: scale(1.05);
+}
+
+/*   Brand Maintenance Cost */
+
+.brand-cost-graphic-container, 
+.year-cost-graph-container, 
+.type-cost-analysis-container, 
+.maintenance-type-cost-analysis-container, 
+.monthly-maintenance-incidence-container,
+.incidence-for-kilometer-container{
+  width: 800px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 25px;
+  margin-top: 50px;
+  position: relative;
+  background-color: rgb(231, 230, 230);
+  z-index: 10; /* z-index değerini sayı olarak belirtin */
+  box-shadow: 5px 5px 10px black,
+  7px 7px 10px white;
+}
+
+.brand-cost-graphic, 
+.year-cost-graph, 
+.type-cost-graph, 
+.maintenance-type-cost-analysis-graph, 
+.monthly-maintenance-incidence-graph,
+.incidence-for-kilometer-graph{
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Yıla Göre Maliyet Analizi*/
+.year-cost-graph-container{
+  width: 900px;
+}
+
+/* Araç Türüne Göre Maliyet Analizi*/
+
+.type-cost-analysis-container{
+  height: 475px;
+}
+
+.type-cost-graph{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 150px;
+
+}
+
+/* Bakım Türüne Göre Maliyet Analizi */
+
+.maintenance-type-cost-analysis-container{
+  margin-top: 42px;
+  height: 500px;
+}
+.maintenance-type-cost-analysis-graph{
+  display: flex;
+  justify-content: center;
+  margin-left: -45px;
+}
+
+
+
+
+
+/*  New Maintenance Record And Update Maintenance Record Style */
+
+
+.maintenance-record-modal .modal-content {
+  background-color: #bbc3c6;
+  border-radius: 20px;
+  border-top: 45px solid #0a0e19;
+  border-bottom: 2.5px solid #0a0e19;
+  border-right: 2.5px solid #0a0e19;
+  border-left: 2.5px solid #0a0e19;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge ekleme */
+  position: relative;
+}
+
+.maintenance-record-modal .modal-content::before {
+  content: ""; /* Şekil ekleneceği için boş bırakılır. Metin eklenecek olsaydı, tırnak içine metin yazılırdı.*/
+  position: absolute; /* Herşeyden bağımsız olarak konumlandırmak*/
+  top: -30.5px; /* Modal'ın üst kısmına mesafe */
+  left: 25px; /* Sol tarafa mesafe */
+  width: 20px; /* Daire boyutu */
+  height: 20px; /* Daire boyutu */
+  background-color: white; /* Dairenin rengi */
+  border-radius: 50%; /* Yuvarlak yapmak için */
+  box-shadow: 35px 0 0 0 white; /* İkinci daireyi oluşturur, 20px sağa kaydırır */
+}
+.maintenance-record-modal-design{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.maintenance-record-modal h2{
+  position: relative;
+  color: white;
+}
+
+.maintenance-record-modal h2::before{
+  content: "Yeni Bakım Kaydı";
+  position: absolute;
+  top: -59px;
+  left: 250px;
+}
+
+
+.maintenance-record-modal-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maintenance-record-modal-container img {
+  width: 128px;
+  height: 128px;
+  margin-left: 50px;
+  margin-top: -150px;
+}
+
+.maintenance-record-modal-car-info, .maintenance-record-modal-record-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.maintenance-record-modal-container span{
+  color: #040104;
+  font-weight: 500;
+  font-size: 20px;
+  width: 250px; /* Sabit bir genişlik vererek hizalama sağlıyoruz */
+  display: inline-block;
+  font-family:sans-serif;
+}
+
+.maintenance-record-modal-record-info-button-container{
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.maintenance-record-modal-record-info-create-button {
+  width: 130px;
+  height: 40px;
+  background: linear-gradient(45deg, #1e3050, #3a537d);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.maintenance-record-modal-record-info-create-button:hover {
+  background: linear-gradient(45deg, #3a537d, #1e3050);
+  transform: scale(1.05);
+}
+
+.maintenance-record-modal-record-info-exit-button {
+  width: 85px;
+  height: 40px;
+  border-radius: 7px;
+  background: linear-gradient(45deg, #c42017, #e63946);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.maintenance-record-modal-record-info-exit-button:hover {
+  background: linear-gradient(45deg, #e63946, #c42017);
+  transform: scale(1.05);
+}
+
+.maintenance-record-modal-record-info input, 
+.maintenance-record-modal-record-info select{
+    width: 250px;
+    height: 30px;
+    background-color: #1e2530; 
+    color: white;
+    border: 1px solid #444c5a;
+    border-radius: 5px;
+    padding-left: 8px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.maintenance-record-modal-record-info textarea
+{
+  background-color: #1e2530; 
+  color: white;
+  border: 1px solid #444c5a;
+  border-radius: 5px;
+  padding-left: 8px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease; 
+}
+
+.new-maintenance-record-modal-record-info input::placeholder, 
+.new-maintenance-record-modal-record-info textarea::placeholder {
+    color: #888;
+}
+
+.maintenance-record-modal-record-info input:focus, 
+.maintenance-record-modal-record-info select:focus {
+    border-color: #4a90e2; /* Odaklanıldığında mavi renk */
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Dış gölge */
+}
+
+.new-maintenance-record-modal-record-info input[type="date"] {
+  background-image: url('/public/Images/reserve.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+.maintenance-record-comment {
+  color: #040104;
+  font-weight: 500;
+  font-size: 20px;
+  width: 250px; /* Sabit genişlik */
+  display: inline-block; /* Diğer input başlıklarıyla hizalı göster */
+  font-family: sans-serif;
+  text-align: left;
+  margin-bottom: 10px; /* Alt boşluk ekleyerek diğer alanlardan ayrılmasını sağla */
+  position: relative;
+  top: -50px;
+}
+
+textarea {
+  width: 250px; /* Diğer input alanlarıyla aynı genişlik */
+  height: 70px; /* Uygun bir yükseklik */
+  background-color: #1e2530;
+  color: white;
+  border: 1px solid #444c5a;
+  border-radius: 5px;
+  padding: 8px; /* İç boşluk */
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #4a90e2; /* Odaklanıldığında mavi kenarlık */
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #4caf50;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 0.5s linear infinite;
+  margin: 0 auto; /* Ortalamak için */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/**/

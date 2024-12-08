@@ -1,0 +1,164 @@
+/* .homepage-background {
+    width: 99vw;
+    height: 2048px; /Full viewport height 
+    background-image: url('/public/Images/Homepage-Background.jpg');
+    background-size: cover;  Ensures the image covers the entire background 
+    background-repeat: no-repeat;  Prevents the image from repeating 
+     background-position: initial inherit; Centers the image 
+     background-attachment: fixed; Keeps the background fixed during scrolling 
+} */
+
+.announcements{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #d5d2bc;
+    opacity: 0.85;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin-left: 65px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border-top: 20px solid #353839;
+    width: 550px;
+    height: 600px;
+
+}
+
+
+.statistics-panel {
+    display: flex;
+    justify-content: center;    
+    padding: 10px;  
+    background-color: #d5d2bc;
+    opacity: 0.95;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin-left: 1315px;
+    margin-top: -600px;
+    border-radius: 8px;
+    border-top: 20px solid #353839;
+    width: 550px;
+    height: 600px;  
+}
+
+
+
+canvas {
+    margin-left: 60px; /* Grafikler istatistik panein merkezinde olmadığı için merkezleme */
+    width: 80% !important;
+    height: auto !important;
+  
+}
+  
+
+.indicator-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 275px 0  20px;
+}
+
+.outer-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9ea295, #bcc3b5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1;
+}
+
+.inner-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.inner-circle::before {
+    content: f05a; /* İkonu buraya ekleyebilirsiniz */
+    font-size: 2rem;
+    color :black;
+}
+
+
+.add-car 
+{
+    width: 200px; /* Butonun genişliği */
+    height: 200px; /* Butonun yüksekliği */
+    border-radius: 50%; /* Butonu yuvarlak yapmak için */
+    background-image: url("/public/Images/add-car-mage.jpg"); /* Buton arka plan resmi */
+    background-size: cover; /* Resmin butonun tamamını kaplamasını sağlar */
+    border: none; /* Butonun kenarlıklarını kaldırır */
+    display: inline-block; /* Butonun yan yana durmasını sağlar */
+    cursor: pointer; /* Butonun üzerine gelindiğinde imleci değiştirir */
+}
+
+.add-invoice
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("/public/Images/add-invoice-image.JPG");
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.add-maintenance
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("/public/Images/add-maintenance-image.JPG");
+    background-size: cover;
+    border:none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.list-stock
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("/public/Images/list-of-stock.jpg");
+    background-size: cover;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-block
+{
+    display: flex; /* Butonların yan yana gelmesi için*/
+    align-items: center;
+    text-align: center;
+    /* margin-top: 275px; */
+    padding: 0 100px;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+.button-block div
+{
+    margin-right: 20px;
+}
+
+.button-block div:last-child {
+    margin-right: 0;
+}
+

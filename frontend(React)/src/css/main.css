@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .container
+{
+    background-color: #15133C;
+  
+}  */
+
+
+body {
+    background-image: url('/public/Images/Homepage-Background.jpg');
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: top bottom center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed as you scroll */
+    
+}
+    /* .app-background {
+        /background-color: #dad6c3;
+        min-height: 100vh; Sayfanın tamamını kaplaması için 
+        width: 99vw;
+        height: 2048px; 
+        background-image: url('/public/Images/Homepage-Background.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+    } */
+
+    #navi-bar
+    {
+        
+        color:#14120f;
+        display: flex; /*Linklerin ve başlığın yan yana gelmesi için*/
+        justify-content: space-between; /* h1 le ul yi yan yana ayırmak için */
+        align-items: center; /* Elemanları merkeze alır */
+        padding: 0 12px; /* Üst ve alttan boşluk olmayacak, sağ ve soldan boşluk olacak */
+        height: 70px; /* Navigation barın yüksekliği */
+        
+    }
+
+    #navi-bar ul {
+        list-style: none;
+        display: flex; /* Navigation bardaki linklerin yan yana gelmesi için*/
+        align-items: center; /* Linkeri ortalama */
+    }
+
+    #navi-bar ul li a {
+        padding: 12px;
+        text-decoration: none;
+        color:#14120f;
+    }
+
+    #navi-bar ul li a:hover{
+        background: #d5d2bc;
+        color:black;
+        border-radius: 10px;
+    }
+
+    

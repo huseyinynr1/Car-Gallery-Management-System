@@ -1,0 +1,112 @@
+    .box-1 {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("/public/Images/loginPage.jpg");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .white-panel {
+        width: 350px;      /* Panelin genişliği (form elemanlarının genişliğine uygun) */
+        padding: 20px;     /* İçerik ile kenarlar arasındaki boşluk */
+        background-color: rgba(255, 255, 255, 0.8); /* Şeffaf beyaz arka plan */
+        border: 1px solid #ccc;   /* Panelin kenarları */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+        border-radius: 10px; /* Panelin köşelerini yuvarlama */
+        text-align: center;
+    }
+    .panel-image{
+        width: 150px; /* Resmin genişliği*/
+        height: auto; /* Genişliğe göre otomatik ayarlama*/
+        margin-bottom: 20px; /* Resim ve form arasındaki boşluk*/
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .login-label, .input-1, .btn-1, .form-1, a {
+        margin-bottom: 21px;
+    }
+
+    .login-label {
+        color: #000000;
+        
+    }
+
+    
+
+    .input-1 {
+        width: 300px;
+        height: 40px;
+        opacity: 0.7;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .btn-1 {
+        width: 300px;
+        height: 50px;
+        border-radius: 35px;
+        color: black;
+        background-color: white;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    .btn-1:hover {
+        background-color: #f0f0f0;
+    }
+    
+    #link-1
+    {
+        display: block; /* Blok elemanı gibi davranır */
+        text-align: center; /* Metni ortalar */
+        width: 100%; /* Bağlantıyı genişletir ve tam ortalar */
+        margin-top: 10px; /* Üstünde biraz boşluk bırakır */
+        color: #007BFF; /* Bağlantı rengi */
+        text-decoration: none; /* Alt çizgiyi kaldırır */
+    }
+
+
+    .loading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      @keyframes colorChange {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+      
+      .logo-animation {
+        width: 750px;
+        height: 550px;
+        animation: colorChange 4s linear infinite;
+      }
+
+
+      .input-error {
+        border: 2px solid red;
+    }
+    
+    .error-text {
+        color: red;
+        font-size: 12px;
+    }
+    

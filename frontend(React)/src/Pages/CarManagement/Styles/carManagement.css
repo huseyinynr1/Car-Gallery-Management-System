@@ -1,0 +1,210 @@
+.search-bar {
+  display: flex;
+  justify-content: center; /* Yatayda merkeze alma */
+  margin-top: 20px;
+}
+
+.search-input {
+  width: 70%; /* Genişlik*/
+  height: 40px; /* Yükseklik */
+  border-radius: 15px; /* Kenarların yuvarlanması*/
+  opacity: 0.75; /* saydamlık */
+  background-color: #d5d2bc; /* arka plan rengi*/
+  border: 1px solid #ccc; /* Varsayılan kenarlık , input bara tıklandığında etkin oldugu andaki efektlerin kaldırılması*/
+  outline: none; /* Tıklama sonrası siyah çerçeveyi kaldırır */
+  padding: 20px; /* İç boşluk */
+}
+
+.search-input:focus {
+  border: 1px solid #ccc; /* Tıklama sonrası kenar rengi değişimini de engeller */
+  outline: none; /* Odaklanma anında çerçeve rengini kaldırır */
+}
+
+.bi-search {
+  margin-top: 10px;
+  background-color: transparent;
+  margin-left: 10px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh; /* Kapsayıcının yüksekliğini ekranın tamamına yay */
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Yatayda ortalama*/
+  /* align-items: center; Dikeyde ortalama */
+  margin-left: 100px;
+  width: 90%;
+  height: 90%;
+  background-color: #d5d2bc;
+  opacity: 0.9;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+
+.add-car-header{
+margin-top: 30px;
+margin-left: 135px;
+}
+
+.add-car-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+
+}
+
+.add-car-container form{
+  display: flex;
+  flex-direction: column; /*Formdaki elemanları dikey olarak alt alta sıralar*/
+  gap: 10px; /* Formdaki elemanların arasına boşluk ekler*/
+  align-items: flex-start;
+}
+
+.add-car-container form input{
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #c6806e;
+  border: none; /* Tıklandığında kenar renklerinin siyah olmasını kaldırır*/
+  color:white; /* Yazı rengini değiştirir*/
+  text-indent: 10px; /* İç Metni sol taraftan 10px öteler */
+}
+
+.add-car-container select{
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #c6806e;
+  border: none; /* Tıklandığında kenar renklerinin siyah olmasını kaldırır*/
+  color:white; /* Yazı rengini değiştirir*/
+  text-indent: 10px; /* İç Metni sol taraftan 10px öteler */
+}
+
+.add-car-container form input:focus
+{
+  border: 1px solid #ccc; /* Tıklama sonrası kenar rengi değişimini de engeller */
+  outline: none; /* Odaklanma anında çerçeve rengini kaldırır */
+}
+
+.add-car-container-formbutton
+{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.add-button{
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #c6806e;
+  border: none;
+  color: white;
+}
+
+.add-button:hover
+{
+  background-color: #d19387;
+}
+
+
+
+.list-car-block{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.list-car-block form{
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+
+.list-car-block input{
+  width: 350px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #c6806e;
+  border: none; /* Tıklandığında kenar renklerinin siyah olmasını kaldırır*/
+  color:white; /* Yazı rengini değiştirir*/
+  text-indent: 10px; /* İç Metni sol taraftan 10px öteler */
+}
+
+.list-car-block input:focus
+{
+  border: 1px solid #ccc; /* Tıklama sonrası kenar rengi değişimini de engeller */
+  outline: none; /* Odaklanma anında çerçeve rengini kaldırır */
+}
+
+.list-car-block input::placeholder{
+  color:white;
+  opacity: 0.8;
+}
+
+.car-list-container{
+  width: 320px;
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0eef0;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 30px;
+}
+
+/* .car-list-container form{
+  display: flex;
+  flex-direction: column;
+} */
+
+.label-form{
+display: flex;
+justify-content: center;
+font-size: 20px;
+}
+
+.car-list-form-button {
+  display: flex;       /* Butonların yan yana gelmesini sağlar */
+  gap: 10px;           /* Butonlar arasında boşluk bırakır */
+  margin-top: 10px;    /* Formun üstüne biraz boşluk bırakır */
+
+}
+
+.car-list-form-button button {
+  width: 100px;
+  height: 50px;
+  flex: 1;             /* Butonların eşit genişlikte olmasını sağlar */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.info-button {
+  background: none; /* Buton arka plan rengi */
+  border: none; /* Kenarlıkları kaldırır */
+  cursor: pointer; /* Buton üzerine gelindiğinde fare imlecini değiştirir */
+  position: relative; /* relative ile yapılan yer değişiklikleri, diğer öğelerin düzenini bozmaz. Yani, yalnızca info-button butonu hareket eder, ama diğer butonlar ve öğeler etkilenmez. Burada istenilen sadece bu butonun aşağı kaymasıydı ama diğer butonlarda aşağıya kayıyordu, bunun için position:relative kullanıldı.*/
+  top: 16px;
+}
+
+.info-button svg {
+  font-size: 45px;       /* İkonun boyutunu ayarlamak için */
+  color: #1e3050;           /* İkonun rengini ayarlamak için */
+}
+
+.info-button svg:hover{
+  color:#48659b;
+}

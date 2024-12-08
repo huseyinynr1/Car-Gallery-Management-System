@@ -1,0 +1,1065 @@
+.inventory-layout {
+  display: flex;
+  flex-direction: flex-start;
+}
+
+.inventory-layout2 {
+  display: flex;
+  flex-direction: flex-start;
+  flex-wrap: wrap; /* Elemanların alt satıra geçmesine izin verir */
+  margin-left: 65px;
+  gap: 65px; /* Elemanlar arası boşluk*/
+}
+
+/*Filter area*/
+.filter-container {
+  width: 300px;
+  height: 110vh;
+  background-color: #2c343d;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 16px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.icons {
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.forms-labels {
+  color: white;
+  margin-left: 5px;
+}
+
+.filter-inputs {
+  border-radius: 10px;
+  border: none; /* Tıklandığında kenar renklerinin siyah olmasını kaldırır*/
+  text-indent: 10px;
+  width: 180px;
+  height: 27px;
+}
+
+.filter-inputs:focus {
+  border: 1px solid #ccc; /* Tıklama sonrası kenar rengi değişimini de engeller */
+  outline: none; /* Odaklanma anında çerçeve rengini kaldırır */
+}
+
+.minMax-input {
+  width: 180px;
+  height: 27px;
+  border-radius: 10px;
+  border: none; /* Tıklandığında kenar renklerinin siyah olmasını kaldırır*/
+  text-indent: 10px;
+}
+
+.minMax-input:focus {
+  border: 1px solid white;
+  outline: none;
+}
+
+.minMax-icon {
+  color: white;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+#transmission-img {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+
+.filters-button {
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 35px;
+  margin-top: 10px;
+  color: #2c343d;
+}
+
+.filters-button:hover {
+  background-color: #2c343d;
+  color: white;
+}
+
+/*Stock Management*/
+
+.area-one {
+  width: 400px;
+  height: 400px;
+  background-color: #c9cbbf;
+  border-radius: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* İçerikleri dikey olarak hizalamak için */
+  align-items: center;
+}
+
+.stock-table {
+  width: 80%; /* Tablo genişliği */
+  border-collapse: collapse; /* Hücreler arasındaki boşlukları kaldırma */
+  margin: 20px 0; /* Tabloyu üstten ve alttan ayırma */
+  margin-left: 20px;
+}
+
+.stock-table thead th {
+  color: #14120f; /* Başlık metin rengi */
+  padding: 10px; /* Hücre içi boşluk */
+  text-align: left; /* Metni sola hizalama */
+  border-bottom: 2px solid #9d9794; /* Alt çizgi */
+}
+
+.stock-table tbody th {
+  border-bottom: 1px solid #9d9794;
+}
+
+.stock-table tbody td {
+  padding: 10px; /* Hücre içi boşluk */
+  border-bottom: 1px solid #9d9794; /* Alt çizgi */
+}
+
+.stock-table tbody tr:hover {
+  background-color: #a7a4a3;
+}
+
+.area-one img {
+  display: flex;
+  justify-content: center;
+}
+
+/*Maintenance Target*/
+.maintenance-target {
+  width: 200px;
+  height: 400px;
+  background-color: #2c343d;
+  border-radius: 10px;
+}
+
+.maintenance-target h2 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  border-bottom: 2px solid #9d9794;
+}
+
+.gauge-container {
+  display: flex; /* Flexbox kullanarak içindeki elemanları düzenliyoruz */
+  justify-content: center; /* Elemanları yatayda ortalıyoruz */
+  align-items: center; /* Elemanları dikeyde ortalıyoruz */
+  margin: 10px; /* Kapsayıcının etrafına 20px boşluk bırakıyoruz */
+  border-bottom: 2px solid #9d9794;
+  padding-bottom: 10px;
+}
+
+.gauge-bg {
+  transform: rotate(
+    -90deg
+  ); /* Daireyi 90 derece döndürerek üstten başlamasını sağlıyoruz */
+  transform-origin: 50% 50%; /* Dairenin dönüş merkezini ortalıyoruz */
+}
+
+.gauge {
+  transform: rotate(-90deg); /* Doluluk dairesini de 90 derece döndürüyoruz */
+  transform-origin: 50% 50%; /* Dairenin dönüş merkezini ortalıyoruz */
+  transition: stroke-dashoffset 0.5s; /* Doluluk çizgisinin animasyon geçiş süresini ayarlıyoruz */
+}
+
+.maintenance-target-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2px solid #9d9794;
+  margin: 15px;
+}
+.maintenance-target-info p {
+  color: white;
+  font-size: 15px;
+}
+
+/*Brand Stock Overview*/
+
+.brad-overview-container {
+  width: 500px;
+  height: 400px;
+  background-color: #c9cbbf;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+}
+
+.brand-img {
+  width: 70px; /* Butonun genişliği */
+  height: 70px; /* Butonun yüksekliği */
+  background-repeat: no-repeat; /* Resmin tekrarlanmaması */
+  background-size: cover; /* Resmin butonu tamamen kaplaması */
+  background-position: center; /* Resmin butonun ortasında yer alması */
+  border-radius: 50%; /* Yuvarlak buton */
+  border: none; /* Kenarlıkları kaldır */
+  background-color: transparent; /* Arka plan rengini şeffaf yap */
+  padding: 0; /* İç boşlukları kaldır */
+  margin: 0; /* Dış boşlukları kaldır */
+  cursor: pointer; /* Buton imlecini işaretçi yap */
+  display: inline-block; /* Butonu satır içi blok yap */
+  position: relative;
+}
+
+.brand-first-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.brand-second-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.brand-third-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+#mercedes {
+  background-image: url("/public/Images/mercedes.png"); /* Resim URL'si */
+}
+
+#audi {
+  background-image: url("/public/Images/audi.png"); /* Resim URL'si */
+}
+
+#bmw {
+  background-image: url("/public/Images/bmw.png"); /* Resim URL'si */
+}
+
+#renault {
+  background-image: url("/public/Images/renault.png"); /* Resim URL'si */
+}
+
+#ford {
+  background-image: url("/public/Images/ford.png"); /* Resim URL'si */
+}
+
+#volkswagen {
+  background-image: url("/public/Images/volkswagen.png"); /* Resim URL'si */
+}
+
+#hyundai {
+  background-image: url("/public/Images/hyundai.png"); /* Resim URL'si */
+}
+
+#honda {
+  background-image: url("/public/Images/honda.png"); /* Resim URL'si */
+}
+
+#ferrari {
+  background-image: url("/public/Images/ferrari.png"); /* Resim URL'si */
+}
+
+#dacia {
+  background-image: url("/public/Images/dacia.png"); /* Resim URL'si */
+}
+
+#alfa {
+  background-image: url("/public/Images/alfa.png"); /* Resim URL'si */
+}
+
+#skoda {
+  background-image: url("/public/Images/skoda.png"); /* Resim URL'si */
+}
+
+#jeep {
+  background-image: url("/public/Images/jeep.png"); /* Resim URL'si */
+}
+
+#fiat {
+  background-image: url("/public/Images/fiat.png"); /* Resim URL'si */
+}
+
+#opel {
+  background-image: url("/public/Images/opel.png"); /* Resim URL'si */
+}
+
+.tooltip-text {
+  visibility: hidden; /* Tooltip başlangıçta gizli */
+  width: 150px; /* Tooltip genişliği */
+  background-color: black; /* Tooltip arka plan rengi */
+  color: #fff; /* Tooltip metin rengi */
+  text-align: center; /* Metni ortalar */
+  border-radius: 6px; /* Köşeleri yuvarlatır */
+  padding: 5px; /* İç boşluk */
+  position: absolute; /* Konumunu bağımsız hale getirir */
+  z-index: 1; /* Tooltip'in üstte görünmesini sağlar */
+  bottom: 100%; /* Tooltip'i butonun yukarısında gösterir */
+  left: 50%; /* Tooltip'i ortalamak için başlangıç noktası */
+  transform: translateX(
+    -50%
+  ); /* Tooltip'i tam olarak butonun ortasına hizalar */
+  opacity: 0; /* Başlangıçta saydam */
+  transition: opacity 0.3s; /* Yumuşak geçiş sağlar */
+}
+
+.brand-img:hover {
+  border: 3px solid #2c343d;
+}
+.brand-img:hover .tooltip-text {
+  visibility: visible; /* Buton üzerine gelindiğinde tooltip görünür hale gelir */
+  opacity: 1; /* Saydamlığı ortadan kalkar */
+}
+
+/*List Of Car*/
+
+.list-of-car-layout {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Her satıra 5 kart sığdırır */
+  grid-gap: 10px; /* Kartlar arasında boşluk bırakır */
+  width: 99%;
+  background-color: #c9cbbf;
+  border-radius: 10px;
+}
+
+.list-of-car-layout-card {
+  width: 18rem;
+  border-radius: 10px;
+}
+
+#card-img {
+  border-radius: 10px;
+}
+
+.info-button {
+  background: none; /* Buton arka plan rengi */
+  border: none; /* Kenarlıkları kaldırır */
+  cursor: pointer; /* Buton üzerine gelindiğinde fare imlecini değiştirir */
+  position: relative; /* relative ile yapılan yer değişiklikleri, diğer öğelerin düzenini bozmaz. Yani, yalnızca info-button butonu hareket eder, ama diğer butonlar ve öğeler etkilenmez. Burada istenilen sadece bu butonun aşağı kaymasıydı ama diğer butonlarda aşağıya kayıyordu, bunun için position:relative kullanıldı.*/
+  top: 0px;
+}
+
+.info-button svg {
+  font-size: 45px; /* İkonun boyutunu ayarlamak için */
+  color: #1e3050; /* İkonun rengini ayarlamak için */
+}
+
+.info-button svg:hover {
+  color: #48659b;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+/* Update Modal Css*/
+.custom-modal .modal-content {
+  background-color: #bbc3c6;
+  border-radius: 20px;
+  border-top: 35px solid #0a0e19;
+  border-bottom: 2.5px solid #0a0e19;
+  border-right: 2.5px solid #0a0e19;
+  border-left: 2.5px solid #0a0e19;
+  position: relative;
+}
+
+.modal-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-modal .modal-content::before {
+  content: ""; /* Şekil ekleneceği için boş bırakılır. Metin eklenecek olsaydı, tırnak içine metin yazılırdı.*/
+  position: absolute; /* Herşeyden bağımsız olarak konumlandırmak*/
+  top: -27.5px; /* Modal'ın üst kısmına mesafe */
+  left: 25px; /* Sol tarafa mesafe */
+  width: 20px; /* Daire boyutu */
+  height: 20px; /* Daire boyutu */
+  background-color: white; /* Dairenin rengi */
+  border-radius: 50%; /* Yuvarlak yapmak için */
+  box-shadow: 35px 0 0 0 white; /* İkinci daireyi oluşturur, 20px sağa kaydırır */
+}
+
+
+/* Modalın arka plan overlay'ini düzenlemek için */
+.custom-modal .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.295);
+}
+
+.custom-form input,
+.custom-form select {
+  background-color: white;
+  color: #080e20;
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 200px;
+}
+
+.custom-form-1 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.custom-form-2 {
+  color: #080e20;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  gap: 31px;
+}
+
+
+
+.custom-form-2 label {
+  width: 100px;
+  height: 35px;
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.custom-form-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.custom-form-3 input,
+.custom-form-3 select {
+  width: 200px;
+}
+
+.custom-form-4 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: 70px;
+}
+
+.custom-form-5 {
+  color: #080e20;
+  display: flex;
+  flex-direction: column;
+  margin-top: 85px;
+  gap: 35px;
+}
+
+.custom-form-5 label {
+  width: 100px;
+  height: 35px;
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.custom-form-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.custom-form-6 img {
+  width: 125px;
+  height: 70px;
+  border-radius: 15px;
+}
+.custom-form-6 input,
+.custom-form-6 select {
+  width: 200px;
+}
+
+.custom-form-7 {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.custom-form-7 input,
+.custom-form-7 select {
+  width: 150px;
+}
+
+.label-circle-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #5d93ce ;
+  border: 2px solid #0a0e19;
+  box-sizing: border-box;
+}
+
+.cancel-button {
+  width: 85px;
+  height: 40px;
+  border-radius: 7px;
+  background-color: #c42017;
+  color: white;
+  border: none;
+}
+
+
+
+.cancel-button:hover {
+  background-color: red;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+/* Info Car Model Style*/
+
+.custom-info-modal .modal-content {
+  background-color: #bbc3c6;
+  border-radius: 20px;
+  border-top: 35px solid #0a0e19;
+  border-bottom: 2.5px solid #0a0e19;
+  border-right: 2.5px solid #0a0e19;
+  border-left: 2.5px solid #0a0e19;
+  position: relative;
+}
+
+.custom-info-modal .modal-content::before {
+  content: ""; /* Şekil ekleneceği için boş bırakılır. Metin eklenecek olsaydı, tırnak içine metin yazılırdı.*/
+  position: absolute; /* Herşeyden bağımsız olarak konumlandırmak*/
+  top: -27.5px; /* Modal'ın üst kısmına mesafe */
+  left: 25px; /* Sol tarafa mesafe */
+  width: 20px; /* Daire boyutu */
+  height: 20px; /* Daire boyutu */
+  background-color: white; /* Dairenin rengi */
+  border-radius: 50%; /* Yuvarlak yapmak için */
+  box-shadow: 35px 0 0 0 white; /* İkinci daireyi oluşturur, 20px sağa kaydırır */
+}
+
+.custom-info-modal h1,
+p {
+  color: #0a0e19;
+}
+
+.exit-button , .update-button {
+  width: 130px;
+  height: 40px;
+  background-color: #0a0e19;
+  color: white;
+  border-radius: 10px;
+}
+
+.exit-button:hover , .update-button:hover {
+  background-color: #1e3050;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+.custom-info-modal-first-part {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*h1 başlığını altındaki 2 kutucuğa göre ortalama*/
+.custom-info-modal-first-part-1 h1 {
+  margin-left: 20px;
+}
+
+.custom-info-modal-first-part img {
+  border-radius: 10px;
+}
+
+.custom-info-modal-medium-part,
+.car-info-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-info-modal-medium-part-1 ,.custom-info-modal-medium-part-2 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.info-modal-brand-and-model {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.info-modal-brand,
+.info-modal-model {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  border: 3px solid #0a0e19;
+  width: 150px;
+  height: 180px;
+  gap: 10px;
+  box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.9);
+}
+
+.info-modal-brand h4,
+.info-modal-model h4 {
+  background-color: #0a0e19;
+  width: 150px;
+  height: 35px;
+  color: white;
+  border-radius: 10px;
+  text-align: start;
+  padding-left: 20px;
+}
+
+.info-modal-brand p,
+.info-modal-model p {
+  font-size: 20px;
+  color: #0a0e19;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Yazılara hafif gölge ekledik */
+}
+
+.info-modal-model img {
+  width: 120px;
+  height: 65px;
+}
+.custom-info-modal-medium-part p {
+  width: 230px;
+  height: 30px;
+  background-color: #0a0e19;
+  color: white;
+  text-align: start;
+  border-radius: 10px;
+  padding-left: 15px;
+  opacity: 0.9;
+}
+
+.icon-class {
+  color: #2c3e50;
+  font-size: 20px;
+}
+
+/* Kilometre alanı tasarımı*/
+.custom-car-infos, .production-year,.car-status, .car-price, .car-stock, .car-maintenance, .car-sold {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 230px;
+  height: 220px;
+  border-radius: 10px;
+  border: 3px solid #0a0e19;
+  box-shadow: 5px 12px 5px rgba(0, 0, 0, 0.9);
+}
+
+/* Kilometre ve yıl alanı için tasarım*/
+
+.custom-car-kilometer, .year  {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 50px;
+}
+
+.digit-box {
+  width: 27.5px; /* Kutucuk genişliği */
+  height: 27.5px; /* Kutucuk yüksekliği */
+  background-color: #0a0e19; /* Koyu mavi renk */
+  color: white; /* Açık mavi renk */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px; /* Kutucukların köşelerini biraz yumuşatalım */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.kilometer-box:nth-child(3)::after {
+  content: ""; /* Nokta eklemek için pseudo element */
+  color: #84a9d9; /* Nokta rengi */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Durum Alanı Tasarımı*/
+
+.wrench-and-hammer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: swing 0.75s linear;
+  animation-iteration-count: 2;
+  gap: 80px;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Bakımda durumu için Animasyonlu Tasarım */
+.hammer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Çekiç Başı */
+.hammer-head {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background: linear-gradient(
+    45deg,
+    #b3b1b1,
+    #a9a9a9
+  ); /*İki rengin belirli bir açı ile birbirine tam karışmadan doğrusal yönde renk görünümü*/
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.6), 5px 5px 10px rgba(0, 0, 0, 0.4),
+    /* inset kullanılmazsa dışına gölge ekleme*/ inset -2px -2px 5px
+      rgba(0, 0, 0, 0.2),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5); /* inset içbükey gölge ekleme*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.square-end {
+  width: 27px;
+  height: 27px;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #a9a9a9, #b3b1b1);
+  box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.6),
+    3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.spike-end {
+  width: 0px;
+  height: 0px;
+  border-radius: 5px;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-top: 25px solid #a9a9a9;
+  box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.6),
+    3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Çekiç Sapı */
+.hammer-handle {
+  width: 18px;
+  height: 110px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #8b5a2b, #a0522d);
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.3),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.2), 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/*İngiliz Anahtarı Tasarımı*/
+.wrench {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrench-head {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #bbc3c6;
+  border-radius: 50%;
+  box-shadow: inset 20px 0 0 0 #a9a9a9fb;
+  transform: rotate(-90deg);
+}
+
+.wrench-handle {
+  width: 18px;
+  height: 110px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, red, rgba(255, 0, 0, 0.856));
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.2), 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.status-text {
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 39%;
+  left: 71.5%;
+  z-index: 2;
+}
+
+/* Transfer Ediliyor Durumu İçin Animasyonlu Tasarım  */
+
+.transfer-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Yol tasarımı */
+.road {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 90px;
+  background-color: #0a0e19;
+  position: relative;
+  overflow: hidden; /* Kamyonun dışarı taşmaması için */
+}
+
+.text {
+  font-size: 20px;
+  color: #0a0e19;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Yazılara hafif gölge ekledik */
+}
+
+/* Beyaz Şerit Tasarımı*/
+.road::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    to right,
+    white,
+    white 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  transform: translateY(-50%);
+  animation: driving 2.5s linear forwards;
+}
+
+@keyframes driving {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 0; /* Arka planı yatayda hareket ettir */
+  }
+}
+
+
+
+/* Kamyon genel düzeni*/
+.truck {
+  display: Flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1px;
+  z-index: 1;
+  animation: drive 2.5s linear;
+}
+
+/* Kamyon arka tarafı*/
+.truckbehind {
+  width: 120px;
+  height: 70px;
+  background-color: #bbc3c6;
+  border-radius: 5px;
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.3),
+    -2px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Kamyon ön tarafı*/
+.truckfront {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 60px;
+  background-color: red;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+
+/* Kamyon camı*/
+.truckfront::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  background: linear-gradient(0deg, black, white);
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(220px);
+  }
+}
+
+
+
+
+
+/* Durum Tasarımları */
+
+.sold-design,
+.gallery-design,
+.returned-design,
+.reserve-design,
+.prepare-car-design,
+.remove-sale-design,
+.pending-design,
+.purchased-design,
+.unknown-design {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font: 1.5em sans-serif;
+  gap: 10px;
+  font-size: 20px;
+  color: #0a0e19;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Yazılara hafif gölge ekledik */
+}
+
+
+
+
+/* Fiyat Alanı Tasarımı */
+
+
+.price-design{
+  display: flex;
+  justify-content: center;
+}
+
+.price-box{
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  background: linear-gradient(45deg,#222,#333);  
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.5),
+  inset 0 0 10px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.currency-sembol{
+  font-size: 1.5rem;
+  color: gold;
+  margin-right: 5px;
+  
+}
+
+.price{
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
+  0 0 15px rgba(255, 255, 0, 0.7);
+}
+
+
+/* Stok Alanı Tasarımı*/
+.stock-design,.maintenance-design,.sold-car-design{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stock-box, .maintenance-box, .sold-car-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.4);
+  background: linear-gradient(45deg,#222,#333);
+  box-shadow: 0 0 15px rgba(0, 128, 0, 0.5),
+  inset 0 0 10px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.stock-count{
+  font-size: 2rem;
+  color: limegreen;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.7),
+  0 0 20px rgba(0, 255, 0, 0.7);
+  margin-left: 10px;
+}
+
+
+/* Servisteki araba sayısı tasarımı */
+
+.maintenance-box{
+  box-shadow: 0 0 15px rgba(241, 75, 46, 0.5),
+  inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.maintenance-count{
+  font-size: 2rem;
+  color: #ec7063;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ec7063,
+  0 0 20px #ec7063;
+  margin-left: 10px;
+}
+
+
+/* Satılan Araba Sayısı Tasarımı */
+
+.sold-car-box{
+  box-shadow: 0 0 15px #417ca3,
+  inset 0 0 10px rgba(255, 255, 255, 0.2); ;
+}
+
+.sold-car-count{
+  font-size: 2rem;
+  color:#5dade2;
+  font-weight: bold;
+  text-shadow: 0 0 10px #5dade2,
+  0 0 20px #5dade2;
+  margin-left: 10px;
+}
